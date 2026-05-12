@@ -6,7 +6,7 @@ DIR2=~/All-in-one-rice/kitty
 DIR3=~/All-in-one-rice/'Mouse Cursors'/'Bibata Modern Ice [Cursor]'
 DIR4=~/All-in-one-rice/topgrade.toml
 DIR5=~/All-in-one-rice/'Mouse Cursors'/'Adwaita [Cursor]'"
-DIR6=~/All-in-one-rice/icons/My-Catppuccin
+DIR6=~/All-in-one-rice/icons/Catppuccin-Mocha
 
 # Destination directories
 DEST1=~/.config
