@@ -5,7 +5,7 @@ DIR1=~/All-in-one-rice/fastfetch
 DIR2=~/All-in-one-rice/kitty
 DIR3=~/All-in-one-rice/'Mouse Cursors'/'Bibata Modern Ice [Cursor]'
 DIR4=~/All-in-one-rice/topgrade.toml
-DIR5=~/All-in-one-rice/'Mouse Cursors'/'Adwaita [Cursor]'"
+DIR5=~/All-in-one-rice/'Mouse Cursors'/'Adwaita [Cursor]'
 DIR6=~/All-in-one-rice/icons/Catppuccin-Mocha
 
 # Destination directories
@@ -26,6 +26,17 @@ mv "$DIR6" "$DEST6"
 
 
 # Set wallpaper
-gsettings set org.gnome.desktop.background picture-uri "file:///home/$(whoami)/All-in-one-rice/wallpapers/cabin-3.png"   
 
-echo "Setup done!"
+echo "Available wallpapers:"
+echo "1. cabin-3.png"
+echo "2. cat-vibin.png"
+echo "3. cottages-river.png"
+echo "Enter the number of the wallpaper to apply:"
+read choice
+case $choice in
+1) wallpaper="cabin-3.png" ;;
+2) wallpaper="cat-vibin.png" ;;
+3) wallpaper="cottages-river.png" ;;
+*) echo "Invalid choice"; exit 1 ;;
+esac
+plasma-apply-wallpaperimage ~/All-in-one-rice/wallpapers/$wallpaper     
