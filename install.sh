@@ -3,9 +3,9 @@
 # Source directories
 DIR1=~/All-in-one-rice/fastfetch
 DIR2=~/All-in-one-rice/kitty
-DIR3=~/All-in-one-rice/mouse-cursors
+DIR3=~/All-in-one-rice/'Mouse Cursors'/'Bibata Modern Ice [Cursor]'
 DIR4=~/All-in-one-rice/topgrade.toml
-DIR5=~/All-in-one-rice/default
+DIR5=~/All-in-one-rice/'Mouse Cursors'/'Adwaita [Cursor]'
 
 # Destination directories
 DEST1=~/.config
