@@ -19,6 +19,7 @@ Third, run the **install.sh** script:
 The script will not override any existing configuration files, so make sure to delete the folders listed below:
 
 /home/$USER/.config/fastfetch/config.jsonc
+
 /home/$USER/.config/kitty/kitty.conf
 
 Command to delete:
