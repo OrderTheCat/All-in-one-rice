@@ -39,4 +39,8 @@ case $choice in
 3) wallpaper="cottages-river.png" ;;
 *) echo "Wrong choice. Please run the script again and select a valid option."; exit 1 ;;
 esac
-plasma-apply-wallpaperimage ~/All-in-one-rice/wallpapers/$wallpaper     
+plasma-apply-wallpaperimage ~/All-in-one-rice/wallpapers/$wallpaper   
+
+## SDDM Theme
+
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/keyitdev/sddm-astronaut-theme/master/setup.sh)"
