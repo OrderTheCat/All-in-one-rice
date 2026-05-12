@@ -22,5 +22,6 @@ mv "$DIR2" "$DEST2"
 mv "$DIR3" "$DEST3"
 mv "$DIR4" "$DEST4"
 mv "$DIR5" "$DEST5"
+mv "$DIR6" "$DEST6"
 
 echo "Setup done!"
