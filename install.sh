@@ -9,7 +9,7 @@ DIR4=~/Simple-Rice/topgrade.toml
 DIR5=~/Simple-Rice/'Mouse Cursors'/'Adwaita [Cursor]'
 DIR6=~/Simple-Rice/icons/Catppuccin-Mocha
 DIR7=~/Simple-Rice/shell/starship.toml
-DIR8=~/Simple-Rice/shell/config.fish
+DIR8=~/Simple-Rice/shell/config.fish    
 
 # Destination directories
 
@@ -22,14 +22,46 @@ DEST6=~/.local/share/icons/
 DEST7=~/.config
 DEST8=~/.config/fish
 
-# Move directories
+# Move directories safely. If the final target already exists, ask before removing it.
+confirm_delete() {
+  target="$1"
 
-mv "$DIR1" "$DEST1"
-mv "$DIR2" "$DEST2"
-mv "$DIR3" "$DEST3"
-mv "$DIR4" "$DEST4"
-mv "$DIR5" "$DEST5"
-mv "$DIR6" "$DEST6"
+  printf '%s [y/N]: ' "$target already exists. Delete it and continue?"
+  read answer
+  case "$answer" in
+    [Yy]*) return 0 ;;
+    *) return 1 ;;
+  esac
+}
+
+move_clean() {
+  src="$1"
+  dest="$2"
+
+  if [ -d "$dest" ]; then
+    target="$dest/$(basename "$src")"
+  else
+    target="$dest"
+  fi
+
+  if [ -e "$target" ]; then
+    if confirm_delete "$target"; then
+      rm -rf "$target"
+    else
+      echo "Skipping move of '$src' because '$target' already exists."
+      return
+    fi
+  fi
+
+  mv "$src" "$dest"
+}
+
+move_clean "$DIR1" "$DEST1"
+move_clean "$DIR2" "$DEST2"
+move_clean "$DIR3" "$DEST3"
+move_clean "$DIR4" "$DEST4"
+move_clean "$DIR5" "$DEST5"
+move_clean "$DIR6" "$DEST6"
 
 
 # Set wallpaper
