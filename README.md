@@ -31,6 +31,8 @@ sh install.sh
 
 If you don't want to use the script and install the rice manually, follow these steps:
 
+
+
 Install starship:
 
 **Debian:**
