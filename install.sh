@@ -4,11 +4,11 @@
 
 DIR1=~/Simple-Rice/fastfetch/config.jsonc
 DIR2=~/Simple-Rice/kitty/kitty.conf
-DIR3=~/Simple-Rice/'Mouse Cursors'/'Bibata Modern Ice [Cursor]'
+DIR3=~/Simple-Rice/mouse-cursors/'Bibata Modern Ice [Cursor]'
 DIR4=~/Simple-Rice/topgrade.toml
-DIR5=~/Simple-Rice/'Mouse Cursors'/'Adwaita [Cursor]'
+DIR5=~/Simple-Rice/mouse-cursors/'Adwaita [Cursor]'
 DIR6=~/Simple-Rice/icons/Catppuccin-Mocha
-DIR7=~/Simple-Rice/shell/starship.toml
+DIR7=~/Simple-Rice/shell/starship.toml  
 DIR8=~/Simple-Rice/shell/config.fish      
 
 # Destination directories
@@ -22,16 +22,36 @@ DEST6=~/.local/share/icons/
 DEST7=~/.config
 DEST8=~/.config/fish
 
-# Move directories safely. If the final target already exists, ask before removing it.
-confirm_delete() {
-  target="$1"
+# Move directories safely. Prompt once if any destination targets already exist.
+prompt_once_delete() {
+  should_prompt=0
+  delete_existing=0
 
-  printf '%s [y/N]: ' "$target already exists. Delete it and continue?"
-  read answer
-  case "$answer" in
-    [Yy]*) return 0 ;;
-    *) return 1 ;;
-  esac
+  for pair in "$DIR1:$DEST1" "$DIR2:$DEST2" "$DIR3:$DEST3" "$DIR4:$DEST4" "$DIR5:$DEST5" "$DIR6:$DEST6"; do
+    src=${pair%%:*}
+    dest=${pair#*:}
+    if [ -d "$dest" ]; then
+      target="$dest/$(basename "$src")"
+    else
+      target="$dest"
+    fi
+
+    if [ -e "$target" ]; then
+      should_prompt=1
+      break
+    fi
+  done
+
+  if [ "$should_prompt" -eq 1 ]; then
+    printf 'Some targets already exist. Delete all existing targets and continue? [y/N]: '
+    read answer
+    case "$answer" in
+      [Yy]*) delete_existing=1 ;;
+      *) delete_existing=0 ;;
+    esac
+  fi
+
+  return $delete_existing
 }
 
 move_clean() {
@@ -45,7 +65,7 @@ move_clean() {
   fi
 
   if [ -e "$target" ]; then
-    if confirm_delete "$target"; then
+    if [ "$delete_existing" -eq 1 ]; then
       rm -rf "$target"
     else
       echo "Skipping move of '$src' because '$target' already exists."
@@ -55,6 +75,12 @@ move_clean() {
 
   mv "$src" "$dest"
 }
+
+if prompt_once_delete; then
+  delete_existing=1
+else
+  delete_existing=0
+fi
 
 move_clean "$DIR1" "$DEST1"
 move_clean "$DIR2" "$DEST2"
