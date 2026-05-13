@@ -39,3 +39,12 @@ Command to delete:
 ```bash
 rm -rf ~/.config/fastfetch/.config.jsonc && rm -rf ~/.config/kitty/kitty.conf
 ```
+
+
+## Wallpapers Preview
+
+**Source**: https://github.com/orangci/walls-catppuccin-mocha/tree/master
+
+***cabin-3.png***
+
+![Alt text](wallpapers/cabin-3.png)   
