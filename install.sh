@@ -5,22 +5,20 @@
 DIR1=~/Simple-Rice/fastfetch/config.jsonc
 DIR2=~/Simple-Rice/kitty/kitty.conf
 DIR3=~/Simple-Rice/mouse-cursors/'Bibata Modern Ice [Cursor]'
-DIR4=~/Simple-Rice/topgrade.toml
-DIR5=~/Simple-Rice/mouse-cursors/'Adwaita [Cursor]'
-DIR6=~/Simple-Rice/icons/Catppuccin-Mocha
-DIR7=~/Simple-Rice/shell/starship.toml  
-DIR8=~/Simple-Rice/shell/config.fish      
+DIR4=~/Simple-Rice/mouse-cursors/'Adwaita [Cursor]'
+DIR5=~/Simple-Rice/icons/Catppuccin-Mocha
+DIR6=~/Simple-Rice/shell/starship.toml  
+DIR7=~/Simple-Rice/shell/config.fish      
 
 # Destination directories
 
 DEST1=~/.config
 DEST2=~/.config
 DEST3=~/.icons
-DEST4=~/.config
-DEST5=~/.icons
-DEST6=~/.local/share/icons/
-DEST7=~/.config
-DEST8=~/.config/fish
+DEST4=~/.icons
+DEST5=~/.local/share/icons/
+DEST6=~/.config
+DEST7=~/.config/fish
 
 # Move directories safely. Prompt once if any destination targets already exist.
 prompt_once_delete() {
