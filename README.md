@@ -27,17 +27,18 @@ bash install.sh
 sh install.sh
 ```
 
-The script will not override any existing configuration files, so make sure to delete the folders listed below:
+The script will not override any existing configuration files, so make sure to delete the files listed below:
 
 ```text
 /home/$USER/.config/fastfetch/config.jsonc
 /home/$USER/.config/kitty/kitty.conf
+/home/$USER/.config/fish/config.fish
 ```
 
 Command to delete:
 
 ```bash
-rm -rf ~/.config/fastfetch/.config.jsonc && rm -rf ~/.config/kitty/kitty.conf
+rm -rf ~/.config/fastfetch/.config.jsonc ~/.config/kitty/kitty.conf ~/.config/fish/config.fish
 ```
 
 

@@ -2,12 +2,14 @@
 
 # Source directories
 
-DIR1=~/All-in-one-rice/fastfetch
-DIR2=~/All-in-one-rice/kitty
-DIR3=~/All-in-one-rice/'Mouse Cursors'/'Bibata Modern Ice [Cursor]'
-DIR4=~/All-in-one-rice/topgrade.toml
-DIR5=~/All-in-one-rice/'Mouse Cursors'/'Adwaita [Cursor]'
-DIR6=~/All-in-one-rice/icons/Catppuccin-Mocha
+DIR1=~/Simple-Rice/fastfetch
+DIR2=~/Simple-Rice/kitty
+DIR3=~/Simple-Rice/'Mouse Cursors'/'Bibata Modern Ice [Cursor]'
+DIR4=~/Simple-Rice/topgrade.toml
+DIR5=~/Simple-Rice/'Mouse Cursors'/'Adwaita [Cursor]'
+DIR6=~/Simple-Rice/icons/Catppuccin-Mocha
+DIR7=~/Simple-Rice/shell/starship.toml
+DIR8=~/Simple-Rice/shell/config.fish
 
 # Destination directories
 
@@ -17,6 +19,8 @@ DEST3=~/.icons
 DEST4=~/.config
 DEST5=~/.icons
 DEST6=~/.local/share/icons/
+DEST7=~/.config
+DEST8=~/.config/fish
 
 # Move directories
 
