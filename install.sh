@@ -3,7 +3,7 @@
 # Source directories
 
 DIR1=~/Simple-Rice/fastfetch/config.jsonc
-DIR2=~/Simple-Rice/kitty/kitty.conf
+DIR2=~/Simple-Rice/kitty
 DIR3=~/Simple-Rice/mouse-cursors/Bibata-Modern-Ice
 DIR4=~/Simple-Rice/mouse-cursors/Adwaita
 DIR5=~/Simple-Rice/icons/Catppuccin-Mocha
