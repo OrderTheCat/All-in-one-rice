@@ -6,13 +6,13 @@ This is a hobbyist project made by me. I made this repository to backup my confi
 First, clone the repository:
 
 ```bash
-git clone https://github.com/OrderTheCat/All-in-one-rice.git
+git clone https://github.com/OrderTheCat/Simple-Rice.git
 ```
 
 Second, go into the repository:
 
 ```bash
-cd All-in-one-rice
+cd Simple-Rice
 ```
 
 Third, run the **install.sh** script:
