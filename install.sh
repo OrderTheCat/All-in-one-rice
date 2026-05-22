@@ -25,7 +25,7 @@ prompt_once_delete() {
   should_prompt=0
   delete_existing=0
 
-  for pair in "$DIR1:$DEST1" "$DIR2:$DEST2" "$DIR3:$DEST3" "$DIR4:$DEST4" "$DIR5:$DEST5" "$DIR6:$DEST6"; do
+  for pair in "$DIR1:$DEST1" "$DIR2:$DEST2" "$DIR3:$DEST3" "$DIR4:$DEST4" "$DIR5:$DEST5" "$DIR6:$DEST6" "$DIR7:$DEST7"; do
     src=${pair%%:*}
     dest=${pair#*:}
     if [ -d "$dest" ]; then
