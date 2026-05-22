@@ -42,4 +42,6 @@ if status is-interactive
     source ~/.config/caelestia/user-config.fish 2> /dev/null
 end
 
-set -U fish_greeting ""
+function fish_greeting
+    fastfetch
+end   
