@@ -12,7 +12,7 @@ DIR7=~/Simple-Rice/shell/config.fish
 
 # Destination directories
 
-DEST1=~/.config
+DEST1=~/.config/fastfetch
 DEST2=~/.config
 DEST3=~/.icons
 DEST4=~/.icons
