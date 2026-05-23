@@ -58,7 +58,7 @@ move_clean() {
     if [ "$delete_existing" -eq 1 ]; then
       rm -rf "$target"
     else
-      echo "Skipping move of '$src' because '$target' already exists."
+      echo "Skipping move of '$src' because '$target' already exists. Try rm -rf'ing it"
       return
     fi
   fi
