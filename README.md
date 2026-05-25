@@ -71,16 +71,6 @@ mv /path/to/rice/folder/icons/Catppuccin-Mocha ~/.local/share/icons
 mv /path/to/rice/folder/kitty/kitty.conf ~/.config/kitty
 ```
 
-**mouse cursors:**
-
-```bash
-mv /path/to/rice/folder/mouse-cursors/'Adwaita [Cursor]' ~/.icons
-```
-
-```bash
-mv /path/to/rice/folder/mouse-cursors/'Bibata Modern Ice [Cursor]' ~/.icons
-```
-
 **shell:**
 
 ```bash

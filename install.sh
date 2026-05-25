@@ -6,25 +6,21 @@ HOME_DIR="${HOME:-$(getent passwd "$(id -un)" 2>/dev/null | cut -d: -f6)}"
 # Source paths in this repository
 SRC1="$REPO_DIR/fastfetch/config.jsonc"
 SRC2="$REPO_DIR/kitty"
-SRC3="$REPO_DIR/mouse-cursors/Bibata-Modern-Ice"
-SRC4="$REPO_DIR/mouse-cursors/Adwaita"
-SRC5="$REPO_DIR/icons/Catppuccin-Mocha"
-SRC6="$REPO_DIR/shell/config.fish"
+SRC3="$REPO_DIR/icons/Catppuccin-Mocha"
+SRC4="$REPO_DIR/shell/config.fish"
 
 # Destination directories
 DEST1="$HOME_DIR/.config/fastfetch"
 DEST2="$HOME_DIR/.config"
-DEST3="$HOME_DIR/.icons"
-DEST4="$HOME_DIR/.icons"
-DEST5="$HOME_DIR/.local/share/icons"
-DEST6="$HOME_DIR/.config/fish"
+DEST3="$HOME_DIR/.local/share/icons"
+DEST4="$HOME_DIR/.config/fish"
 
 # Move directories safely. Prompt once if any destination targets already exist.
 prompt_once_delete() {
   should_prompt=0
   delete_existing=0
 
-  for pair in "$SRC1:$DEST1" "$SRC2:$DEST2" "$SRC3:$DEST3" "$SRC4:$DEST4" "$SRC5:$DEST5" "$SRC6:$DEST6"; do
+  for pair in "$SRC1:$DEST1" "$SRC2:$DEST2" "$SRC3:$DEST3" "$SRC4:$DEST4"; do
     src=${pair%%:*}
     dest=${pair#*:}
     target="$dest/$(basename "$src")"
@@ -76,8 +72,6 @@ move_clean "$SRC1" "$DEST1"
 move_clean "$SRC2" "$DEST2"
 move_clean "$SRC3" "$DEST3"
 move_clean "$SRC4" "$DEST4"
-move_clean "$SRC5" "$DEST5"
-move_clean "$SRC6" "$DEST6"
 
 # Set wallpaper
 
