@@ -44,4 +44,9 @@ end
 
 function fish_greeting
     fastfetch
-end   
+end
+
+function last_history_item
+    history --max=1
+end
+abbr -a !! --position anywhere --function last_history_item
