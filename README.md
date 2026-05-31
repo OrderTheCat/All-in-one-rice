@@ -65,6 +65,18 @@ mv /path/to/rice/folder/shell/config.fish ~/.config/fish
 mv /path/to/rice/folder/shell/starship.toml ~/.config
 ```
 
+## Icon Theme
+
+Flat Remix Violet Dark.
+  - Can be found in the kde plasma themes store.
+
+
+## Cursor Theme
+
+Adwaita defautl GNOME cursor.
+  - Can be found in this github repository:
+    - https://github.com/manu-mannattil/adwaita-cursors
+
 I'm sure you can set the wallpapers by yourself :D
 
 
