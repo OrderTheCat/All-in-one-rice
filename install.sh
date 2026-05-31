@@ -15,7 +15,7 @@ DEST2="$HOME_DIR/.config"
 DEST3="$HOME_DIR/.local/share/icons"
 DEST4="$HOME_DIR/.config/fish"
 
-# Move directories safely. Prompt once if any destination targets already exist.
+# Move directories safely. Prompt once if any destination targets already exist.  a
 prompt_once_delete() {
   should_prompt=0
   delete_existing=0
