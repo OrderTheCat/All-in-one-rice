@@ -32,22 +32,6 @@ sh install.sh
 If you don't want to use the script and install the rice manually, follow these steps:
 
 
-
-Install starship:
-
-**Debian:**
-```bash
-sudo apt install starship
-```
-
-**Fedora:**
-```bash
-sudo dnf install starship
-```
-
-**Arch:**
-```bash
-sudo pacman -S starship
 ```
 
 Move configuration files:
